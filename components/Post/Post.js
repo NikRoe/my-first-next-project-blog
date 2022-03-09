@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as React from "react";
 import styled from "styled-components";
 
@@ -6,6 +7,9 @@ export function Post({ id, title, date }) {
     <Container>
       <Title id={id}>{title}</Title>
       <time dateTime={date}>{date}</time>
+      <Link href={"/blog/" + id}>
+        <a> Go to blog post</a>
+      </Link>
     </Container>
   );
 }
