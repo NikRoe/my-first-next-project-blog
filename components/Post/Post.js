@@ -5,11 +5,12 @@ import styled from "styled-components";
 export function Post({ id, title, date }) {
   return (
     <Container>
-      <Title id={id}>{title}</Title>
-      <time dateTime={date}>{date}</time>
       <Link href={"/blog/" + id}>
-        <a> Go to blog post</a>
+        <a>
+          <Title id={id}>{title}</Title>
+        </a>
       </Link>
+      <time dateTime={date}>{date}</time>
     </Container>
   );
 }
