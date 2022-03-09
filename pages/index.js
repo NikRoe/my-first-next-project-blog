@@ -17,8 +17,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
+  // getting data (can be fetch, can be some function)
   const posts = getSortedPostsData();
-
   return {
     props: {
       posts: posts,
