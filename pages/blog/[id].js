@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { PostWrapper } from "../../components/PostWrapper/PostWrapper";
 import { getPostData, getSortedPostsData } from "../../lib/posts";
 
 export default function BlogPost({ post }) {
@@ -10,14 +11,16 @@ export default function BlogPost({ post }) {
       <Head>
         <title>{post.id}</title>
       </Head>
-      <h2>{post.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
-      <time dateTime={post.date}>{post.date}</time>
-      <div>
-        <Link href="/">
-          <a>Go back to home page</a>
-        </Link>
-      </div>
+      <PostWrapper>
+        <h2>{post.title}</h2>
+        <time dateTime={post.date}>{post.date}</time>
+        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
+        <div>
+          <Link href="/">
+            <a>Go back to home page</a>
+          </Link>
+        </div>
+      </PostWrapper>
     </>
   );
 }

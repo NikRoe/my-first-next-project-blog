@@ -19,7 +19,7 @@ const List = styled.ul`
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 60ch;
   list-style: none;
 `;
