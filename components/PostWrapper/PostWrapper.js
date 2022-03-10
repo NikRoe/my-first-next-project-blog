@@ -7,4 +7,6 @@ export const PostWrapper = styled.div`
   gap: 1rem;
   padding: 2rem;
   border-radius: 14px;
+  width: 60vw;
+  flex-wrap: wrap;
 `;

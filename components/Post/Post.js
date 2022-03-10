@@ -3,6 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 export function Post({ id, title, date }) {
+  const newDate = date.replaceAll("-", ".");
   return (
     <Container>
       <Link href={"/blog/" + id}>
@@ -10,7 +11,7 @@ export function Post({ id, title, date }) {
           <Title id={id}>{title}</Title>
         </a>
       </Link>
-      <time dateTime={date}>{date}</time>
+      <time dateTime={date}>{newDate}</time>
     </Container>
   );
 }

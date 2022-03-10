@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { PostList } from "../components/PostList/PostList";
+import { Title } from "../components/Title/Title";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({ posts }) {
@@ -10,7 +11,7 @@ export default function Home({ posts }) {
       </Head>
       <h1>My Blog</h1>
       <p>Lorem Ipsum…</p>
-      <h2>Posts</h2>
+      <Title>Posts</Title>
       <PostList posts={posts} />
     </>
   );
