@@ -10,6 +10,7 @@ export default function BlogPost({ post }) {
       <Head>
         <title>{post.id}</title>
       </Head>
+      <h2>{post.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
       <time dateTime={post.date}>{post.date}</time>
       <div>
